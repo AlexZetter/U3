@@ -18,4 +18,4 @@ if (!isset($_GET["id"], $_GET["ids"], $_GET["frstname"])) {
 
 
 
-//Parametrar = "id", "ids", "frstname"
+//Parametrar = "id", "ids", "frstname", limit, include (int eller bool)
