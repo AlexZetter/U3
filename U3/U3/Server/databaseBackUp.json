@@ -31,7 +31,7 @@
     {"id":29,"street_name":"Valley Edge","street_number":"6","realtor":"Riffwire","tenant_id":29},
     {"id":30,"street_name":"Huxley","street_number":"4","realtor":"Kaymbo","tenant_id":30}],
     "Tenants": [
-        [{"id":1,"first_name":"Zoe","last_name":"Brennen","email":"zbrennen0@reference.com","apartment_id":1},
+        {"id":1,"first_name":"Zoe","last_name":"Brennen","email":"zbrennen0@reference.com","apartment_id":1},
             {"id":2,"first_name":"Dre","last_name":"Johnke","email":"djohnke1@irs.gov","apartment_id":2},
             {"id":3,"first_name":"Stillmann","last_name":"McAlister","email":"smcalister2@tinypic.com","apartment_id":3},
             {"id":4,"first_name":"Jessalin","last_name":"Tree","email":"jtree3@wordpress.com","apartment_id":4},
@@ -60,6 +60,6 @@
             {"id":27,"first_name":"Adolphe","last_name":"Pavolillo","email":"apavolilloq@discovery.com","apartment_id":27},
             {"id":28,"first_name":"Bernette","last_name":"Tilte","email":"btilter@parallels.com","apartment_id":28},
             {"id":29,"first_name":"Lia","last_name":"Blessed","email":"lblesseds@wordpress.com","apartment_id":29},
-            {"id":30,"first_name":"Kerri","last_name":"Besnard","email":"kbesnardt@hugedomains.com","apartment_id":30}]
+            {"id":30,"first_name":"Kerri","last_name":"Besnard","email":"kbesnardt@hugedomains.com","apartment_id":30}
     ]
     }
