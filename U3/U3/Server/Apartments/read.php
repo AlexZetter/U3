@@ -1,74 +1,71 @@
 <?php
 require_once "../functions.php";
 $database = loadJson("../database.json");
-
 $allApartments = $database["Apartments"];
-
-
-if (!isset($_GET["id"], $_GET["ids"], $_GET["frstname"])) {
-    echo "<pre>";
-    var_dump($allApartments);
-    echo "</pre>";
-} else {
-}
-
-
-
+$allTenants = $database["Tenants"];
 ?>
-
-
-
-
-
 <?php
-
-//Parametrar = "id", "ids", "frstname", limit, include (int eller bool)
-
-
+//Parametrar = "id", "ids", "apartment_name", limit, include (int eller bool)
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 //limit
 if ($requestMethod == "GET") {
     if (isset($_GET["n"])) {
-
-        $users = loadJson("database.json");
         $returnUsers = array_slice($users, 0, $_GET["n"]);
     }
 
-    //id
-    if (isset($_GET["id"])) {
-        $users = loadJson("database.json");
-        foreach ($users as $key => $user) {
-            if ($user["id"] == $_GET["id"]) {
-                sendJson($users[$key]);
-            }
-        }
-    }
+    // //id
+    // if (isset($_GET["id"])) {
+    //     foreach ($allApartments as $key => $apartment) {
+    //         if ($apartment["id"] == $_GET["id"]) {
+    //             sendJson($allApartments[$key]);
+    //         }
+    //     }
+    // }
 
     //ids
     if (isset($_GET["ids"])) {
-        //IDS
-        $users = loadJson("database.json");
         $ids = explode(",", $_GET["ids"]);
-        $arrayOfUsers = [];
-        foreach ($users as $user) {
-            if (in_array($user["id"], $ids)) {
-                $arrayOfUsers[] = $user;
+        $arrayOfApartments = [];
+        foreach ($allApartments as $apartment) {
+            if (in_array($apartment["id"], $ids)) {
+                $arrayOfApartments[] = $apartment;
             }
         }
-        sendJson($arrayOfUsers);
+        sendJson($arrayOfApartments);
     }
 
 
     //first_name
-
-    if (isset($_GET["id"])) {
-        $users = loadJson("database.json");
-        foreach ($users as $key => $user) {
-            if ($user["first_name"] == $_GET["first_name"]) {
-                sendJson($users[$key]);
+    if (isset($_GET["street_name"])) {
+        foreach ($allApartments as $key => $apartment) {
+            if ($apartment["street_name"] == $_GET["street_name"]) {
+                sendJson($allApartments[$key]);
             }
         }
     }
 }
+
+//include
+if (isset($_GET["include"], $_GET["id"])) {
+    if ($_GET["include"] == "true") {
+        foreach ($allApartments as $keyApartments => $apartment) {
+            if ($apartment["id"] == $_GET["id"]) {
+                foreach ($allTenants as $keyTenants => $tenant) {
+                    if ($apartment["id"] == $tenant["apartment_id"]) {
+                        $mergedObject = [
+                            "id" => $apartment["id"],
+                            "Tenant" => $tenant["id"]
+                        ];
+                        sendJson($mergedObject);
+                    }
+                }
+            }
+        }
+    } elseif ($_GET["include"] == "false") {
+        sendJson(["error"]);
+    }
+}
+
+
 ?>
