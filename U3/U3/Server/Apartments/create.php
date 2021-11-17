@@ -10,7 +10,7 @@ $contentType = $_SERVER["CONTENT_TYPE"];
 
 // echo "<pre>";
 // var_dump($allApartments);
-// echo "</pre>";
+// echo "</pre>"; 
 
 if (isset($inputData)){
     if ($requestData === "POST"){
