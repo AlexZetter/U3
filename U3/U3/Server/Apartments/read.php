@@ -14,14 +14,14 @@ if ($requestMethod == "GET") {
         $returnUsers = array_slice($users, 0, $_GET["n"]);
     }
 
-    // //id
-    // if (isset($_GET["id"])) {
-    //     foreach ($allApartments as $key => $apartment) {
-    //         if ($apartment["id"] == $_GET["id"]) {
-    //             sendJson($allApartments[$key]);
-    //         }
-    //     }
-    // }
+    //  id
+    if (isset($_GET["id"]) && !isset($_GET["include"])) {
+        foreach ($allApartments as $key => $apartment) {
+            if ($apartment["id"] == $_GET["id"]) {
+                sendJson(includer($apartment, $allTenants));
+            }
+        }
+    }
 
     //ids
     if (isset($_GET["ids"])) {
@@ -29,43 +29,24 @@ if ($requestMethod == "GET") {
         $arrayOfApartments = [];
         foreach ($allApartments as $apartment) {
             if (in_array($apartment["id"], $ids)) {
-                $arrayOfApartments[] = $apartment;
+                $arrayOfApartments[] = includer($apartment, $allTenants);
             }
         }
         sendJson($arrayOfApartments);
     }
 
 
-    //first_name
+    //street_name
     if (isset($_GET["street_name"])) {
         foreach ($allApartments as $key => $apartment) {
             if ($apartment["street_name"] == $_GET["street_name"]) {
-                sendJson($allApartments[$key]);
+                sendJson(includer($apartment, $allTenants));
             }
         }
     }
 }
 
-//include
-if (isset($_GET["include"], $_GET["id"])) {
-    if ($_GET["include"] == "true") {
-        foreach ($allApartments as $keyApartments => $apartment) {
-            if ($apartment["id"] == $_GET["id"]) {
-                foreach ($allTenants as $keyTenants => $tenant) {
-                    if ($apartment["id"] == $tenant["apartment_id"]) {
-                        $mergedObject = [
-                            "id" => $apartment["id"],
-                            "Tenant" => $tenant["id"]
-                        ];
-                        sendJson($mergedObject);
-                    }
-                }
-            }
-        }
-    } elseif ($_GET["include"] == "false") {
-        sendJson(["error"]);
-    }
-}
+
 
 
 ?>
