@@ -10,6 +10,8 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 //limit
 if ($requestMethod == "GET") {
+
+
     if (isset($_GET["limit"])) {
         $returnApartments = array_slice($allApartments, 0, $_GET["limit"]);
         sendJson($returnApartments);
@@ -17,13 +19,14 @@ if ($requestMethod == "GET") {
     }
 
     //  id
-    if (isset($_GET["id"]) && !isset($_GET["include"])) {
+    if (isset($_GET["id"])) {
         foreach ($allApartments as $key => $apartment) {
             if ($apartment["id"] == $_GET["id"]) {
                 sendJson(includer($apartment, $allTenants));
                 exit();
             }
         }
+        sendJson("user not found", 404);
     }
 
     //ids
@@ -50,7 +53,7 @@ if ($requestMethod == "GET") {
         }
     }
 } else {
-    sendJson("you tried using the post method: " . $requestMethod . "." . " Please use GET");
+    sendJson("you tried using the post method: " . $requestMethod . "." . " Please use GET", 400);
     exit();
 }
 

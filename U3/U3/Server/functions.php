@@ -24,8 +24,6 @@ function saveJson($filename, $data)
 function includer($apartmentObject, $tenantArray)
 {
     if (isset($_GET["include"])) {
-
-
         if ($_GET["include"] == true)
             foreach ($tenantArray as $tenant) {
                 if ($apartmentObject["tenant_id"] == $tenant["id"]) {
