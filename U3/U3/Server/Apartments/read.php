@@ -10,18 +10,24 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 //limit
 if ($requestMethod == "GET") {
-    if (isset($_GET["n"])) {
-        $returnUsers = array_slice($users, 0, $_GET["n"]);
+
+
+    if (isset($_GET["limit"])) {
+        $returnApartments = array_slice($allApartments, 0, $_GET["limit"]);
+        sendJson($returnApartments);
+        exit();
     }
 
-    // //id
-    // if (isset($_GET["id"])) {
-    //     foreach ($allApartments as $key => $apartment) {
-    //         if ($apartment["id"] == $_GET["id"]) {
-    //             sendJson($allApartments[$key]);
-    //         }
-    //     }
-    // }
+    //  id
+    if (isset($_GET["id"])) {
+        foreach ($allApartments as $key => $apartment) {
+            if ($apartment["id"] == $_GET["id"]) {
+                sendJson(includer($apartment, $allTenants));
+                exit();
+            }
+        }
+        sendJson("user not found", 404);
+    }
 
     //ids
     if (isset($_GET["ids"])) {
@@ -29,43 +35,29 @@ if ($requestMethod == "GET") {
         $arrayOfApartments = [];
         foreach ($allApartments as $apartment) {
             if (in_array($apartment["id"], $ids)) {
-                $arrayOfApartments[] = $apartment;
+                $arrayOfApartments[] = includer($apartment, $allTenants);
             }
         }
         sendJson($arrayOfApartments);
+        exit();
     }
 
 
-    //first_name
+    //street_name
     if (isset($_GET["street_name"])) {
         foreach ($allApartments as $key => $apartment) {
             if ($apartment["street_name"] == $_GET["street_name"]) {
-                sendJson($allApartments[$key]);
+                sendJson(includer($apartment, $allTenants));
+                exit();
             }
         }
     }
+} else {
+    sendJson("you tried using the post method: " . $requestMethod . "." . " Please use GET", 400);
+    exit();
 }
 
-//include
-if (isset($_GET["include"], $_GET["id"])) {
-    if ($_GET["include"] == "true") {
-        foreach ($allApartments as $keyApartments => $apartment) {
-            if ($apartment["id"] == $_GET["id"]) {
-                foreach ($allTenants as $keyTenants => $tenant) {
-                    if ($apartment["id"] == $tenant["apartment_id"]) {
-                        $mergedObject = [
-                            "id" => $apartment["id"],
-                            "Tenant" => $tenant["id"]
-                        ];
-                        sendJson($mergedObject);
-                    }
-                }
-            }
-        }
-    } elseif ($_GET["include"] == "false") {
-        sendJson(["error"]);
-    }
-}
+
 
 
 ?>
