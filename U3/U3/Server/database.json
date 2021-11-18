@@ -209,6 +209,20 @@
             "street_number": "4",
             "realtor": "Kaymbo",
             "tenant_id": 30
+        },
+        {
+            "id": 31,
+            "street_name": "Pallekuling",
+            "street_number": "8",
+            "realtor": "Mynte",
+            "tenant_id": 31
+        },
+        {
+            "id": 32,
+            "street_name": "Hejhopp",
+            "street_number": "8",
+            "realtor": "Mynte",
+            "tenant_id": 32
         }
     ],
     "Tenants": [

@@ -9,7 +9,7 @@ $contentType = $_SERVER["CONTENT_TYPE"];
 if (isset($inputData)){
     if ($requestData === "POST"){
         if($contentType === "application/json"){
-            $database = loadJson("../databaseBackUp2.json");
+            $database = loadJson("../database.json");
             $allApartments = $database["Apartments"];
 
 
@@ -20,7 +20,7 @@ if (isset($inputData)){
             $streetNumber = $inputData["street_number"];
             $realtor = $inputData["realtor"];
 
-            if(!isset($streetName, $streetNumber, $realtor)){
+            if(!isset($streetName, $streetNumber, $realtor) || trim($streetName) == ''){
                 sendJson(["message" => "Du måste fylla i alla fält"], 400);
             }
 
@@ -36,7 +36,7 @@ if (isset($inputData)){
 
             array_push($database["Apartments"], $newApartment);
 
-            saveJson("../databaseBackUp2.json", $database);
+            saveJson("../database.json", $database);
             sendJson([$newApartment], 201);
             
         }else {
