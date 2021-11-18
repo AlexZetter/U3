@@ -5,14 +5,8 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 $encodedInput = file_get_contents("php://input");
 $decodedInput = json_decode($encodedInput, true);
 
-//var_dump($decodedInput);
-
-//echo $decodedInput["street_name"];
-
 if($requestMethod === "PATCH"){
     $database = loadJson("../database.json");
-    //$foundApartment = NULL;
-    $found = false;
     $allApartments = $database["Apartments"];
 
     foreach($database["Apartments"] as $key => $apartment){
@@ -35,21 +29,13 @@ if($requestMethod === "PATCH"){
                 sendJson(["message" => "du måste fylla i alla fält"], 400);
             }
         
-
-
-
-           $allApartments[$key] = $apartment;
+           $database["Apartments"][$key] = $apartment;
            $foundApartment = $apartment;
-           $found = true;
-           
-           //var_dump($allApartments[$key]);
-
         } 
-
     }
     saveJson("../database.json", $database);
-    //sendJson([$foundApartment], 201);
-    // sendJson(["message" => "ID:et finns inte, prova med något annat"], 400);
+    sendJson([$foundApartment], 201);
+    //sendJson(["message" => "ID:et finns inte, prova med något annat"], 400);
 }
 
 
