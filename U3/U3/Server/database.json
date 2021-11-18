@@ -219,9 +219,9 @@
         },
         {
             "id": 32,
-            "street_name": "Hejhopp",
-            "street_number": "8",
-            "realtor": "Mynte",
+            "street_name": "fff",
+            "street_number": 6,
+            "realtor": "hej",
             "tenant_id": 32
         }
     ],
