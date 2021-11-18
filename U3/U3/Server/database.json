@@ -1,65 +1,440 @@
 {
-    "Apartments": 
-    [{"id":1,"street_name":"Darwin","street_number":"8","realtor":"Cogidoo","tenant_id":1},
-    {"id":2,"street_name":"Colorado","street_number":"8","realtor":"Mynte","tenant_id":2},
-    {"id":3,"street_name":"Susan","street_number":"22510","realtor":"Voonte","tenant_id":3},
-    {"id":4,"street_name":"Derek","street_number":"56","realtor":"Livetube","tenant_id":4},
-    {"id":5,"street_name":"Nelson","street_number":"73","realtor":"Buzzbean","tenant_id":5},
-    {"id":6,"street_name":"Walton","street_number":"44","realtor":"Einti","tenant_id":6},
-    {"id":7,"street_name":"1st","street_number":"5","realtor":"Chatterpoint","tenant_id":7},
-    {"id":8,"street_name":"Lukken","street_number":"8234","realtor":"Flashpoint","tenant_id":8},
-    {"id":9,"street_name":"Huxley","street_number":"24740","realtor":"JumpXS","tenant_id":9},
-    {"id":10,"street_name":"Riverside","street_number":"0","realtor":"Jayo","tenant_id":10},
-    {"id":11,"street_name":"Meadow Valley","street_number":"9","realtor":"Viva","tenant_id":11},
-    {"id":12,"street_name":"4th","street_number":"5323","realtor":"Podcat","tenant_id":12},
-    {"id":13,"street_name":"Tomscot","street_number":"7","realtor":"Livetube","tenant_id":13},
-    {"id":14,"street_name":"Milwaukee","street_number":"8","realtor":"Voonte","tenant_id":14},
-    {"id":15,"street_name":"Oneill","street_number":"405","realtor":"Layo","tenant_id":15},
-    {"id":16,"street_name":"Meadow Vale","street_number":"68","realtor":"Ailane","tenant_id":16},
-    {"id":17,"street_name":"Gina","street_number":"02","realtor":"Oba","tenant_id":17},
-    {"id":18,"street_name":"New Castle","street_number":"1","realtor":"Fatz","tenant_id":18},
-    {"id":19,"street_name":"Fieldstone","street_number":"0","realtor":"Skinder","tenant_id":19},
-    {"id":20,"street_name":"Stoughton","street_number":"9","realtor":"Rooxo","tenant_id":20},
-    {"id":21,"street_name":"Duke","street_number":"0","realtor":"Abata","tenant_id":21},
-    {"id":22,"street_name":"Sunbrook","street_number":"47668","realtor":"Thoughtbeat","tenant_id":22},
-    {"id":23,"street_name":"Muir","street_number":"4560","realtor":"Vidoo","tenant_id":23},
-    {"id":24,"street_name":"Karstens","street_number":"0937","realtor":"Latz","tenant_id":24},
-    {"id":25,"street_name":"Eagan","street_number":"30","realtor":"Kwinu","tenant_id":25},
-    {"id":26,"street_name":"Novick","street_number":"4","realtor":"Meezzy","tenant_id":26},
-    {"id":27,"street_name":"Veith","street_number":"0087","realtor":"Minyx","tenant_id":27},
-    {"id":28,"street_name":"Columbus","street_number":"67","realtor":"Browsedrive","tenant_id":28},
-    {"id":29,"street_name":"Valley Edge","street_number":"6","realtor":"Riffwire","tenant_id":29},
-    {"id":30,"street_name":"Huxley","street_number":"4","realtor":"Kaymbo","tenant_id":30}],
+    "Apartments": [
+        {
+            "id": 1,
+            "street_name": "pellepluto",
+            "street_number": "8",
+            "realtor": "Cogidoo",
+            "tenant_id": 1
+        },
+        {
+            "id": 2,
+            "street_name": "Colorado",
+            "street_number": "8",
+            "realtor": "Mynte",
+            "tenant_id": 2
+        },
+        {
+            "id": 3,
+            "street_name": "Susan",
+            "street_number": "22510",
+            "realtor": "Voonte",
+            "tenant_id": 3
+        },
+        {
+            "id": 4,
+            "street_name": "Derek",
+            "street_number": "56",
+            "realtor": "Livetube",
+            "tenant_id": 4
+        },
+        {
+            "id": 5,
+            "street_name": "Nelson",
+            "street_number": "73",
+            "realtor": "Buzzbean",
+            "tenant_id": 5
+        },
+        {
+            "id": 6,
+            "street_name": "Walton",
+            "street_number": "44",
+            "realtor": "Einti",
+            "tenant_id": 6
+        },
+        {
+            "id": 7,
+            "street_name": "1st",
+            "street_number": "5",
+            "realtor": "Chatterpoint",
+            "tenant_id": 7
+        },
+        {
+            "id": 8,
+            "street_name": "Lukken",
+            "street_number": "8234",
+            "realtor": "Flashpoint",
+            "tenant_id": 8
+        },
+        {
+            "id": 9,
+            "street_name": "Huxley",
+            "street_number": "24740",
+            "realtor": "JumpXS",
+            "tenant_id": 9
+        },
+        {
+            "id": 10,
+            "street_name": "Riverside",
+            "street_number": "0",
+            "realtor": "Jayo",
+            "tenant_id": 10
+        },
+        {
+            "id": 11,
+            "street_name": "Meadow Valley",
+            "street_number": "9",
+            "realtor": "Viva",
+            "tenant_id": 11
+        },
+        {
+            "id": 12,
+            "street_name": "4th",
+            "street_number": "5323",
+            "realtor": "Podcat",
+            "tenant_id": 12
+        },
+        {
+            "id": 13,
+            "street_name": "Tomscot",
+            "street_number": "7",
+            "realtor": "Livetube",
+            "tenant_id": 13
+        },
+        {
+            "id": 14,
+            "street_name": "Milwaukee",
+            "street_number": "8",
+            "realtor": "Voonte",
+            "tenant_id": 14
+        },
+        {
+            "id": 15,
+            "street_name": "Oneill",
+            "street_number": "405",
+            "realtor": "Layo",
+            "tenant_id": 15
+        },
+        {
+            "id": 16,
+            "street_name": "Meadow Vale",
+            "street_number": "68",
+            "realtor": "Ailane",
+            "tenant_id": 16
+        },
+        {
+            "id": 17,
+            "street_name": "Gina",
+            "street_number": "02",
+            "realtor": "Oba",
+            "tenant_id": 17
+        },
+        {
+            "id": 18,
+            "street_name": "New Castle",
+            "street_number": "1",
+            "realtor": "Fatz",
+            "tenant_id": 18
+        },
+        {
+            "id": 19,
+            "street_name": "Fieldstone",
+            "street_number": "0",
+            "realtor": "Skinder",
+            "tenant_id": 19
+        },
+        {
+            "id": 20,
+            "street_name": "Stoughton",
+            "street_number": "9",
+            "realtor": "Rooxo",
+            "tenant_id": 20
+        },
+        {
+            "id": 21,
+            "street_name": "Duke",
+            "street_number": "0",
+            "realtor": "Abata",
+            "tenant_id": 21
+        },
+        {
+            "id": 22,
+            "street_name": "Sunbrook",
+            "street_number": "47668",
+            "realtor": "Thoughtbeat",
+            "tenant_id": 22
+        },
+        {
+            "id": 23,
+            "street_name": "Muir",
+            "street_number": "4560",
+            "realtor": "Vidoo",
+            "tenant_id": 23
+        },
+        {
+            "id": 24,
+            "street_name": "Karstens",
+            "street_number": "0937",
+            "realtor": "Latz",
+            "tenant_id": 24
+        },
+        {
+            "id": 25,
+            "street_name": "Eagan",
+            "street_number": "30",
+            "realtor": "Kwinu",
+            "tenant_id": 25
+        },
+        {
+            "id": 26,
+            "street_name": "Novick",
+            "street_number": "4",
+            "realtor": "Meezzy",
+            "tenant_id": 26
+        },
+        {
+            "id": 27,
+            "street_name": "Veith",
+            "street_number": "0087",
+            "realtor": "Minyx",
+            "tenant_id": 27
+        },
+        {
+            "id": 28,
+            "street_name": "Columbus",
+            "street_number": "67",
+            "realtor": "Browsedrive",
+            "tenant_id": 28
+        },
+        {
+            "id": 29,
+            "street_name": "Valley Edge",
+            "street_number": "6",
+            "realtor": "Riffwire",
+            "tenant_id": 29
+        },
+        {
+            "id": 30,
+            "street_name": "Huxley",
+            "street_number": "4",
+            "realtor": "Kaymbo",
+            "tenant_id": 30
+        },
+        {
+            "id": 31,
+            "street_name": "Pallekuling",
+            "street_number": "8",
+            "realtor": "Mynte",
+            "tenant_id": 31
+        },
+        {
+            "id": 32,
+            "street_name": "fff",
+            "street_number": 6,
+            "realtor": "hej",
+            "tenant_id": 32
+        }
+    ],
     "Tenants": [
-        {"id":1,"first_name":"Zoe","last_name":"Brennen","email":"zbrennen0@reference.com","apartment_id":1},
-            {"id":2,"first_name":"Dre","last_name":"Johnke","email":"djohnke1@irs.gov","apartment_id":2},
-            {"id":3,"first_name":"Stillmann","last_name":"McAlister","email":"smcalister2@tinypic.com","apartment_id":3},
-            {"id":4,"first_name":"Jessalin","last_name":"Tree","email":"jtree3@wordpress.com","apartment_id":4},
-            {"id":5,"first_name":"Veronike","last_name":"Keough","email":"vkeough4@slashdot.org","apartment_id":5},
-            {"id":6,"first_name":"Johnnie","last_name":"Warder","email":"jwarder5@simplemachines.org","apartment_id":6},
-            {"id":7,"first_name":"Shoshana","last_name":"Rubinlicht","email":"srubinlicht6@seesaa.net","apartment_id":7},
-            {"id":8,"first_name":"Beulah","last_name":"Cundey","email":"bcundey7@infoseek.co.jp","apartment_id":8},
-            {"id":9,"first_name":"Dari","last_name":"Dubois","email":"ddubois8@constantcontact.com","apartment_id":9},
-            {"id":10,"first_name":"Deloris","last_name":"Legier","email":"dlegier9@sbwire.com","apartment_id":10},
-            {"id":11,"first_name":"Monro","last_name":"Uvedale","email":"muvedalea@marketwatch.com","apartment_id":11},
-            {"id":12,"first_name":"Horten","last_name":"Worman","email":"hwormanb@yellowbook.com","apartment_id":12},
-            {"id":13,"first_name":"Aleksandr","last_name":"Jahn","email":"ajahnc@theatlantic.com","apartment_id":13},
-            {"id":14,"first_name":"Jerrie","last_name":"Temperton","email":"jtempertond@hibu.com","apartment_id":14},
-            {"id":15,"first_name":"Heidie","last_name":"Halston","email":"hhalstone@vinaora.com","apartment_id":15},
-            {"id":16,"first_name":"Cinda","last_name":"Baldi","email":"cbaldif@abc.net.au","apartment_id":16},
-            {"id":17,"first_name":"Sayer","last_name":"Woolager","email":"swoolagerg@spotify.com","apartment_id":17},
-            {"id":18,"first_name":"Gianina","last_name":"Kinton","email":"gkintonh@opensource.org","apartment_id":18},
-            {"id":19,"first_name":"Indira","last_name":"Treweela","email":"itreweelai@webmd.com","apartment_id":19},
-            {"id":20,"first_name":"Clio","last_name":"Fearnall","email":"cfearnallj@google.de","apartment_id":20},
-            {"id":21,"first_name":"Edd","last_name":"Nilles","email":"enillesk@de.vu","apartment_id":21},
-            {"id":22,"first_name":"Raimondo","last_name":"D'Antoni","email":"rdantonil@phpbb.com","apartment_id":22},
-            {"id":23,"first_name":"Lisle","last_name":"Marlon","email":"lmarlonm@163.com","apartment_id":23},
-            {"id":24,"first_name":"Shell","last_name":"Fennick","email":"sfennickn@ebay.co.uk","apartment_id":24},
-            {"id":25,"first_name":"Dyanna","last_name":"Valder","email":"dvaldero@businesswire.com","apartment_id":25},
-            {"id":26,"first_name":"Thibaut","last_name":"Gayden","email":"tgaydenp@ocn.ne.jp","apartment_id":26},
-            {"id":27,"first_name":"Adolphe","last_name":"Pavolillo","email":"apavolilloq@discovery.com","apartment_id":27},
-            {"id":28,"first_name":"Bernette","last_name":"Tilte","email":"btilter@parallels.com","apartment_id":28},
-            {"id":29,"first_name":"Lia","last_name":"Blessed","email":"lblesseds@wordpress.com","apartment_id":29},
-            {"id":30,"first_name":"Kerri","last_name":"Besnard","email":"kbesnardt@hugedomains.com","apartment_id":30}
+        {
+            "id": 1,
+            "first_name": "Zoe",
+            "last_name": "Brennen",
+            "email": "zbrennen0@reference.com",
+            "apartment_id": 1
+        },
+        {
+            "id": 2,
+            "first_name": "Dre",
+            "last_name": "Johnke",
+            "email": "djohnke1@irs.gov",
+            "apartment_id": 2
+        },
+        {
+            "id": 3,
+            "first_name": "Stillmann",
+            "last_name": "McAlister",
+            "email": "smcalister2@tinypic.com",
+            "apartment_id": 3
+        },
+        {
+            "id": 4,
+            "first_name": "Jessalin",
+            "last_name": "Tree",
+            "email": "jtree3@wordpress.com",
+            "apartment_id": 4
+        },
+        {
+            "id": 5,
+            "first_name": "Veronike",
+            "last_name": "Keough",
+            "email": "vkeough4@slashdot.org",
+            "apartment_id": 5
+        },
+        {
+            "id": 6,
+            "first_name": "Johnnie",
+            "last_name": "Warder",
+            "email": "jwarder5@simplemachines.org",
+            "apartment_id": 6
+        },
+        {
+            "id": 7,
+            "first_name": "Shoshana",
+            "last_name": "Rubinlicht",
+            "email": "srubinlicht6@seesaa.net",
+            "apartment_id": 7
+        },
+        {
+            "id": 8,
+            "first_name": "Beulah",
+            "last_name": "Cundey",
+            "email": "bcundey7@infoseek.co.jp",
+            "apartment_id": 8
+        },
+        {
+            "id": 9,
+            "first_name": "Dari",
+            "last_name": "Dubois",
+            "email": "ddubois8@constantcontact.com",
+            "apartment_id": 9
+        },
+        {
+            "id": 10,
+            "first_name": "Deloris",
+            "last_name": "Legier",
+            "email": "dlegier9@sbwire.com",
+            "apartment_id": 10
+        },
+        {
+            "id": 11,
+            "first_name": "Monro",
+            "last_name": "Uvedale",
+            "email": "muvedalea@marketwatch.com",
+            "apartment_id": 11
+        },
+        {
+            "id": 12,
+            "first_name": "Horten",
+            "last_name": "Worman",
+            "email": "hwormanb@yellowbook.com",
+            "apartment_id": 12
+        },
+        {
+            "id": 13,
+            "first_name": "Aleksandr",
+            "last_name": "Jahn",
+            "email": "ajahnc@theatlantic.com",
+            "apartment_id": 13
+        },
+        {
+            "id": 14,
+            "first_name": "Jerrie",
+            "last_name": "Temperton",
+            "email": "jtempertond@hibu.com",
+            "apartment_id": 14
+        },
+        {
+            "id": 15,
+            "first_name": "Heidie",
+            "last_name": "Halston",
+            "email": "hhalstone@vinaora.com",
+            "apartment_id": 15
+        },
+        {
+            "id": 16,
+            "first_name": "Cinda",
+            "last_name": "Baldi",
+            "email": "cbaldif@abc.net.au",
+            "apartment_id": 16
+        },
+        {
+            "id": 17,
+            "first_name": "Sayer",
+            "last_name": "Woolager",
+            "email": "swoolagerg@spotify.com",
+            "apartment_id": 17
+        },
+        {
+            "id": 18,
+            "first_name": "Gianina",
+            "last_name": "Kinton",
+            "email": "gkintonh@opensource.org",
+            "apartment_id": 18
+        },
+        {
+            "id": 19,
+            "first_name": "Indira",
+            "last_name": "Treweela",
+            "email": "itreweelai@webmd.com",
+            "apartment_id": 19
+        },
+        {
+            "id": 20,
+            "first_name": "Clio",
+            "last_name": "Fearnall",
+            "email": "cfearnallj@google.de",
+            "apartment_id": 20
+        },
+        {
+            "id": 21,
+            "first_name": "Edd",
+            "last_name": "Nilles",
+            "email": "enillesk@de.vu",
+            "apartment_id": 21
+        },
+        {
+            "id": 22,
+            "first_name": "Raimondo",
+            "last_name": "D'Antoni",
+            "email": "rdantonil@phpbb.com",
+            "apartment_id": 22
+        },
+        {
+            "id": 23,
+            "first_name": "Lisle",
+            "last_name": "Marlon",
+            "email": "lmarlonm@163.com",
+            "apartment_id": 23
+        },
+        {
+            "id": 24,
+            "first_name": "Shell",
+            "last_name": "Fennick",
+            "email": "sfennickn@ebay.co.uk",
+            "apartment_id": 24
+        },
+        {
+            "id": 25,
+            "first_name": "Dyanna",
+            "last_name": "Valder",
+            "email": "dvaldero@businesswire.com",
+            "apartment_id": 25
+        },
+        {
+            "id": 26,
+            "first_name": "Thibaut",
+            "last_name": "Gayden",
+            "email": "tgaydenp@ocn.ne.jp",
+            "apartment_id": 26
+        },
+        {
+            "id": 27,
+            "first_name": "Adolphe",
+            "last_name": "Pavolillo",
+            "email": "apavolilloq@discovery.com",
+            "apartment_id": 27
+        },
+        {
+            "id": 28,
+            "first_name": "Bernette",
+            "last_name": "Tilte",
+            "email": "btilter@parallels.com",
+            "apartment_id": 28
+        },
+        {
+            "id": 29,
+            "first_name": "Lia",
+            "last_name": "Blessed",
+            "email": "lblesseds@wordpress.com",
+            "apartment_id": 29
+        },
+        {
+            "id": 30,
+            "first_name": "Kerri",
+            "last_name": "Besnard",
+            "email": "kbesnardt@hugedomains.com",
+            "apartment_id": 30
+        }
     ]
-    }
+}

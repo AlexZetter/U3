@@ -5,56 +5,48 @@ $inputData = loadJson("php://input");
 $requestData = $_SERVER["REQUEST_METHOD"];
 $contentType = $_SERVER["CONTENT_TYPE"];
 
-// $database = loadJson("../database.json");
-// $allApartments = $database["Apartments"];
-
-// echo "<pre>";
-// var_dump($allApartments);
-// echo "</pre>"; 
-
+//var_dump($inputData);
 if (isset($inputData)){
-    if ($requestData === "POST"){
-        if($contentType === "application/json"){
-            $json = file_get_contents("../databaseBackUp2.json");
-            $data = json_decode($json, true);
-            // $database = loadJson("../databaseBackUp2.json");
-            // $allApartments = $database["Apartments"];
+    if (!empty($inputData["street_name"]) && !empty($inputData["street_number"]) && !empty($inputData["realtor"])){
+        //var_dump($inputData["street_name"]);
+        if ($requestData === "POST"){
+            if($contentType === "application/json"){
+                $database = loadJson("../database.json");
+                $allApartments = $database["Apartments"];
 
+                $highestID = max((array_column($database["Apartments"], "id")));
+                $nextID = $highestID + 1;
+                $streetName = $inputData["street_name"];
+                $streetNumber = $inputData["street_number"];
+                $realtor = $inputData["realtor"];
 
-            $highestID = max((array_column($data["Apartments"], "id")));
-            $nextID = $highestID + 1;
+                // if(!isset($streetName, $streetNumber, $realtor)){
+                //     sendJson(["message" => "dom finns inte i ISSET FATTA DE"], 400);
+                // }
 
-            $streetName = $inputData["street_name"];
-            $streetNumber = $inputData["street_number"];
-            $realtor = $inputData["realtor"];
-
-
-            $newApartment = [
-                "id" => $nextID,
-                "street_name" => $streetName,
-                "street_number" => $streetNumber,
-                "realtor" => $realtor,
-                "tenant_id" => $nextID
-            ];
-
-            
-            echo "<pre>";
-            var_dump($newApartment);
-            echo "</pre>";
-
-
-            array_push($data["Apartments"], $newApartment);
-
-            // saveJson("../databaseBackUp2.json", $database);
-            $json = json_encode($data, JSON_PRETTY_PRINT);
-            file_put_contents("../databaseBackUp2.json", $json);
-            sendJson(["id" => $newApartment], 201);
-            
-        }else {
-            sendJson(["message" => "bad request!"], 400);
+                $newApartment = [
+                    "id" => $nextID,
+                    "street_name" => $streetName,
+                    "street_number" => $streetNumber,
+                    "realtor" => $realtor,
+                    "tenant_id" => $nextID
+                ];
+                array_push($database["Apartments"], $newApartment);
+                saveJson("../database.json", $database);
+                sendJson([$newApartment], 201);
+                
+            }else {
+                sendJson(["message" => "not json"], 400);
+            }
+        } else {
+            sendJson(["message" => "method not allowed!"], 400);
         }
+    } else {
+        sendJson(["message" => "Du har glömt fylla i något av fälten"], 400);
     }
-}
+} else {
+    sendJson(["message" => "isset är TOOOM"], 400);
+} 
 
 
 ?>
