@@ -1,8 +1,7 @@
 <?php
 require_once "../functions.php";
-$database = loadJson("../database.json");
-$allApartments = $database["Apartments"];
-$allTenants = $database["Tenants"];
+
+
 ?>
 <?php
 //Parametrar = "id", "ids", "apartment_name", limit, include (int eller bool)
@@ -10,11 +9,23 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 
 //limit
 if ($requestMethod == "GET") {
+    $database = loadJson("../database.json");
+    $allApartments = $database["Apartments"];
+    $allTenants = $database["Tenants"];
+
+    if (!isset($_GET["id"]) && !isset($_GET["ids"]) && !isset($_GET["street_name"]) &&  !isset($_GET["limit"])) {
+        var_dump($database);
+    }
+
 
 
     if (isset($_GET["limit"])) {
+        $limitedArray = [];
         $returnApartments = array_slice($allApartments, 0, $_GET["limit"]);
-        sendJson($returnApartments);
+        foreach ($returnApartments as $returnedApartment) {;
+            array_push($limitedArray, includer($returnedApartment, $allTenants));
+        }
+        sendJson($limitedArray);
         exit();
     }
 
@@ -31,11 +42,16 @@ if ($requestMethod == "GET") {
 
     //ids
     if (isset($_GET["ids"])) {
+        $idsFound = false;
         $ids = explode(",", $_GET["ids"]);
         $arrayOfApartments = [];
         foreach ($allApartments as $apartment) {
             if (in_array($apartment["id"], $ids)) {
+                $idsFound = true;
                 $arrayOfApartments[] = includer($apartment, $allTenants);
+            }
+            if (!$idsFound) {
+                sendJson("users not found", 404);
             }
         }
         sendJson($arrayOfApartments);
