@@ -223,6 +223,13 @@
             "street_number": 6,
             "realtor": "hej",
             "tenant_id": 32
+        },
+        {
+            "id": 33,
+            "street_name": "Tester",
+            "street_number": "420",
+            "realtor": "Coolguy",
+            "tenant_id": 33
         }
     ],
     "Tenants": [
@@ -256,9 +263,9 @@
         },
         {
             "id": 5,
-            "first_name": "Veronike",
-            "last_name": "Keough",
-            "email": "vkeough4@slashdot.org",
+            "first_name": "Tester",
+            "last_name": "420",
+            "email": "Coolguy",
             "apartment_id": 5
         },
         {
@@ -435,6 +442,20 @@
             "last_name": "Besnard",
             "email": "kbesnardt@hugedomains.com",
             "apartment_id": 30
+        },
+        {
+            "id": 31,
+            "first_name": "Tester",
+            "last_name": "420",
+            "email": "Coolguy",
+            "tenant_id": 31
+        },
+        {
+            "id": 32,
+            "first_name": "Tester",
+            "last_name": "420",
+            "email": "Coolguy",
+            "tenant_id": 32
         }
     ]
 }
