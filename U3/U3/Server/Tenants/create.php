@@ -30,16 +30,16 @@ if (isset($inputData)){
                 sendJson([$newTenant], 201);
                 
             }else {
-                sendJson(["message" => "not json"], 400);
+                sendJson(["message" => "bad request"], 400);
             }
         } else {
-            sendJson(["message" => "method not allowed!"], 400);
+            sendJson(["message" => "method not allowed!"], 405);
         }
     } else {
         sendJson(["message" => "Du har glömt fylla i något av fälten"], 400);
     }
 } else {
-    sendJson(["message" => "isset är TOOOM"], 400);
+    sendJson(["message" => "bad request"], 400);
 } 
 
 

@@ -2,37 +2,37 @@
     "Apartments": [
         {
             "id": 1,
-            "street_name": "pellepluto",
-            "street_number": "8",
-            "realtor": "Cogidoo",
+            "street_name": "dd",
+            "street_number": "4",
+            "realtor": "ff",
             "tenant_id": 1
         },
         {
             "id": 2,
-            "street_name": "Colorado",
-            "street_number": "8",
-            "realtor": "Mynte",
+            "street_name": "Per",
+            "street_number": 4,
+            "realtor": "alex",
             "tenant_id": 2
         },
         {
             "id": 3,
-            "street_name": "Susan",
-            "street_number": "22510",
-            "realtor": "Voonte",
+            "street_name": "hejd\u00e5",
+            "street_number": 4,
+            "realtor": "alex",
             "tenant_id": 3
         },
         {
             "id": 4,
-            "street_name": "Derek",
-            "street_number": "56",
-            "realtor": "Livetube",
+            "street_name": "gg",
+            "street_number": "5",
+            "realtor": "gg",
             "tenant_id": 4
         },
         {
             "id": 5,
-            "street_name": "Nelson",
-            "street_number": "73",
-            "realtor": "Buzzbean",
+            "street_name": "",
+            "street_number": "3",
+            "realtor": "dd",
             "tenant_id": 5
         },
         {
