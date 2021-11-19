@@ -50,9 +50,9 @@ if ($requestMethod == "GET") {
                 $idsFound = true;
                 $arrayOfApartments[] = includer($apartment, $allTenants);
             }
-            if (!$idsFound) {
-                sendJson("users not found", 404);
-            }
+        }
+        if (!$idsFound) {
+            sendJson("user not found", 404);
         }
         sendJson($arrayOfApartments);
         exit();
