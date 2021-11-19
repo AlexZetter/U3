@@ -44,11 +44,9 @@ if($requestMethod === "PATCH"){
 
     if ($found){
         saveJson("../database.json", $database);
-        sendJson([$foundTenant], 201);
+        sendJson([$foundTenant], 200);
     }
 
 } else {
     sendJson(["message" => "Method not allowed"], 405);
 }
-
-?>
